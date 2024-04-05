@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { robotoMono } from '@/config/font'
 import { metaData } from '@/config/meta'
 
-import { ThemeProviders } from '@/providers/theme-provider'
+import { ThemeProvider } from '@/providers/theme-provider'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={robotoMono.className}>
-        <ThemeProviders>{children}</ThemeProviders>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

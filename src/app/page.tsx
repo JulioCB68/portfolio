@@ -1,10 +1,11 @@
-import ThemeSwitch from '@/components/ThemeSwitch'
+import Header from '@/components/header'
+import Hero from '@/components/typewriter'
 
 export default function Home() {
   return (
     <div>
-      <h1>Hello portfolio</h1>
-      <ThemeSwitch />
+      <Header />
+      <Hero />
     </div>
   )
 }
