@@ -17,7 +17,7 @@ export function LanguageToggle() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="border-input hover:bg-accent hover:text-accent-foreground inline-flex h-9 items-center justify-center rounded-md border bg-transparent px-2.5">
+      <DropdownMenuTrigger className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-transparent px-2.5 hover:bg-accent hover:text-accent-foreground">
         <Languages className="size-5" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
