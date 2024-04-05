@@ -1,18 +1,16 @@
 'use client'
 
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter'
 
-export default function Typewriter({ title }: { title: string }) {
-  const [text] = useTypewriter({
-    words: [`${title}`, 'FrontEndDeveloper.tsx', '<Software Engineer />'],
-    loop: true,
-    delaySpeed: 2000,
-  })
-
+export default function Tyspewriter({ title }: { title: string }) {
   return (
-    <>
-      <span>{text}</span>
-      <Cursor cursorColor="#F7ABDA" />
-    </>
+    <Typewriter
+      words={[`${title}`, 'FrontEndDeveloper.tsx', '<Software Engineer />']}
+      cursor
+      cursorColor="#F7ABDA"
+      typeSpeed={70}
+      deleteSpeed={50}
+      delaySpeed={1000}
+    />
   )
 }
