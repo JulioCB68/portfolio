@@ -33,6 +33,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+	  --body-filter: invert(1);
   }
 
   .dark {
@@ -63,6 +65,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+   
+    --body-filter: invert(0);
   }
 }
 
@@ -73,4 +77,20 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body:after {
+  content: "";
+  background-image: url("/grid.svg");
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: var(--body-filter);
 }
