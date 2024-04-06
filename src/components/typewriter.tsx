@@ -11,6 +11,7 @@ export default function Tyspewriter({ title }: { title: string }) {
       typeSpeed={70}
       deleteSpeed={50}
       delaySpeed={1000}
+      loop={false}
     />
   )
 }
